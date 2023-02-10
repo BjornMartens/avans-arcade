@@ -1,0 +1,16 @@
+Game engine 
+To create a game engine suited to our specifications there will be a C program written for the STM32. To crate the game engine on the STM. To create the engine will utilize a state machine. In the state machine the following attributes will be present:
+-	Handling the game logic 
+-	Handling the game physics 
+-	Handling the entity’s and objects 
+-	Handling the player character
+-	Handling the graphical updates to the PPU
+One important aspect of the sate machine / switch case is that the graphical updates to the PPU will be at the end of its routine. The reason for this is so that the game is able to update once and everything will be in the right place instead of moving 1 entity updating the graphics and then moving the next which would make the system inefficient. 
+
+
+Entity’s
+For the state of the entity’s a switch case. The reason for this is because a entity has a couple of states in which it can be in. This is a simple and efficient way of changing the state of a entity after is has been hit bye  a bullet for example. It will work as follow:
+-	Normal walking
+-	When hit bye bullet, Switch case 1 meaning the entity is dead
+This system will also be utilised bye the player character so that the player is also easy to update. 
+ 
